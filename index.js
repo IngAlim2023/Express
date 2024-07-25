@@ -7,5 +7,12 @@ app.get('/',(req, res)=>{
     });
 });
 
-app.listen(3000)
-console.log(`Server on port ${3000}`)
+app.get('/products',(req, res)=>{
+    res.sendFile('/static/products.html',{
+        root: __dirname
+    });
+});
+
+
+app.listen(3000);
+console.log(`Server on port ${3000}`);
